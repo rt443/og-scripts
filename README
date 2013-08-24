@@ -1,0 +1,6 @@
+sudo apt-get sudo apt-get --yes update
+sudo apt-get --yes install git
+
+cd ~
+git clone https://github.com/rt443/og-scripts.git
+

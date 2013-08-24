@@ -29,6 +29,10 @@ wget -qO- http://apt.opengeo.org/gpg.key | apt-key add -
 echo "deb http://apt.opengeo.org/ubuntu lucid main" >> /etc/apt/sources.list
 apt-get --yes update
 apt-cache search opengeo
-apt-get install opengeo-suite
+apt-get --yes install opengeo-suite
 
 sudo reboot
+
+#psql -U postgres -d geoserver -f fields_900913.sql
+
+
