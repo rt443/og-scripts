@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script has to be run as su - otherwise all the cat stuff won't work
+
 sudo apt-get --yes update
 sudo apt-get upgrade --yes --fix-missing
 sudo apt-get --yes install postgresql postgresql-client postgresql-contrib
@@ -8,8 +10,6 @@ sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 sudo mkswap /swapfile
 sudo chown root:root /swapfile
 sudo chmod 0600 /swapfile
-
-sudo su
 
 cat > /etc/postgresql/9.1/main/pg_hba.conf <<EOF
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
