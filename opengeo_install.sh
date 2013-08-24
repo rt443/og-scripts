@@ -26,7 +26,7 @@ EOF
 psql -U postgres -c "ALTER USER postgres WITH PASSWORD 'D4nnyd4t4';"
 
 wget -qO- http://apt.opengeo.org/gpg.key | apt-key add -
-echo "deb http://apt.opengeo.org/ubuntu lucid main" >> /etc/apt/sources.list
+echo "deb http://apt.opengeo.org/suite/v3/ubuntu lucid main" >> /etc/apt/sources.list
 apt-get --yes update
 apt-cache search opengeo
 apt-get --yes install opengeo-suite
