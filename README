@@ -5,5 +5,7 @@ cd ~
 git clone https://github.com/rt443/og-scripts.git
 cd og-scripts
 chmod +x *sh
+sudo su
+
 ./opengeo_install.sh
 
